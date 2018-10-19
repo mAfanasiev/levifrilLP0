@@ -320,3 +320,32 @@ $(document).ready(function () {
 
 
 });
+
+$(document).ready(function(){
+    $('.count').text(0);
+   var show = true;
+     var countbox = ".use";                                            // назва блоку з лічильником
+     $(window).on("scroll", function(){
+      if(!show) return false;                               // Відміна анімації, якщо вона уже була виконана
+      var w_top = $(window).scrollTop();                    // Кількість пікселів на яку прокручена сторінка
+      var e_top = $(countbox).offset().top - 1100;       // Відстань від блоку з лічильника до верху всього документу
+      var w_height = $(window).height();                    // Висота вікна браузера
+      var d_height = $(document).height();                  // Висота всього документа
+      var e_height = $(countbox).outerHeight();             // Повна висока блоку з лічильником
+      if(w_top >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
+       $('.count').each(function(){
+        $(this).animate({
+         count: $(this).data("name")
+        }, {
+         duration: 2500,                                                        //час анімації
+         easing: 'swing',
+         step:function(now){
+          $(this).text(Math.ceil(now));
+         }
+        });
+       });
+
+       show = false;
+      }
+     });
+});

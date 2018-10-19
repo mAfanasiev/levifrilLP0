@@ -1,3 +1,253 @@
+
 .sert {
-  height: 500px;
+  background: url(../img/repeat__bg.png) no-repeat center center;
+  background-size: cover;
+  padding: 85px 0;
+  & .components__text{
+  	margin-top: 15px;
+  	position: relative;
+  	&::after {
+    content: '';
+    width: 50px;
+    height: 5px;
+    background-color: #f07227;
+    position: absolute;
+    left: calc(50% - 25px);
+    bottom: -30px;
+}
+  }
+  &-head__box{
+  	position: relative;
+  	margin-top: 75px;
+  }
+  &-block{
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	position: relative;
+  	z-index: 2;
+  	&__box{
+  		display: flex;
+  		flex-direction: column;
+  		align-items: center;
+  		justify-content: center;
+  		margin: 0 25px;
+  	}
+  	&__country{
+  		color: #666666;
+		font-family: Roboto;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: normal;
+		text-transform: uppercase;
+  	}
+  	&__item{
+  		height: 235px;
+  		width: 204px;
+  		overflow:hidden;
+  	}
+  }
+  &-ramka{
+  	height: 116px;
+  	width: 100%;
+	background-color: #f5f5f3;
+	border: 6px solid #fff;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	position: absolute;
+	top: 50%;
+	transform: translate(0%, -21%);
+	z-index: 1;
+  }
+  & .block__el{
+  	display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #f07227;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+    margin-top: 22px;
+    margin-bottom: 10px;
+  }
+  &-result{
+  	margin-top: 35px;
+  	padding-top: 50px;
+  	border-top: 1px solid rgba(0,0,0,0.12);
+  	display: flex;
+  	justify-content: space-between;
+
+  	&_box{
+  		width: 370px;
+
+  	}
+	&__text{
+		color: #333333;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 20px;
+		text-align: center;
+	}
+	&__indicate{
+		background: url(../img/95idic.png) no-repeat;
+		width: 100%;
+		height: 73px;
+		color: #ffffff;
+		font-size: 34px;
+		font-weight: 900;
+		line-height: 83px;
+		text-align: center;
+		margin-top: 12px;
+	}
+	&__indicate2{
+		background: url(../img/76idic.png) no-repeat;
+	}
+	&__indicate3{
+		background: url(../img/92idic.png) no-repeat;
+	}
+  }
+  &-private{
+  	
+  	margin-top: 60px; 
+  	
+  	
+  	
+  	&-box{
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	overflow: hidden;
+  	&:before,&:after{
+  		content: '';
+  		display: inline-block;
+  		vertical-align: middle;
+  		width: 100%;
+  		height: 1px;
+		background-color: #018dcc;
+		border: solid #FFF;
+  		border-width: 0 10px;
+  	}
+  	&:before{
+  		 margin-left: -100%
+  	}
+  	&:after{
+  		margin-right: -100%;
+  	}
+  }
+  &__logo{
+  	padding-left: 30px;
+  }
+  &__text{
+  	padding-left: 20px;
+  	padding-right: 30px;
+  }
+  &__textone{
+  	color: #444444;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 18px;
+	margin-bottom: 10px;
+  }
+  &__texttwo{
+  	color: #018dcc;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18px;
+  }
+  }
+}
+@media screen and (max-width: 1190px){
+	.sert{
+		&-result{
+			&__indicate{
+				background-size: 100%;
+				line-height: 76px;
+			}
+			&_boxcenter{
+				margin: 0 10px;
+			}
+			&__text{
+			font-size: 17px;
+		}
+		}
+	}
+}
+@media screen and (max-width: 1023px){
+	.sert{
+		&-ramka{
+			display: none;
+		}
+		&-result{
+			&__indicate{
+				background-size: 100%;
+				line-height: 57px;
+				    font-size: 29px;
+			}	
+		}
+		&-block{
+			&__item{
+				height: auto;
+				width: 100%;
+				overflow: inherit;
+			}
+		}
+	}
+}
+@media screen and (max-width: 767px){
+.sert{
+	padding: 40px 0;
+		&-result{
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		&-block{
+			flex-wrap: wrap;
+			&__box{
+				margin: 8px;
+			}
+		}
+		& .block__el{
+			margin-top: 15px;
+		}
+		&-head__box{
+			margin-top: 55px;
+		}
+		&-result__indicate{
+			line-height: 82px;
+		}
+		&-private-box{
+			overflow: inherit;
+			flex-wrap: wrap;
+			&:after,&:before{
+				display: none;
+			}
+		}
+		&-private__logo{
+			padding-left: 0;
+		}
+		&-private__text{
+			padding-right: 0;
+			margin-top: 15px;
+		}
+		&-private{
+			margin-top: 35px;
+		}
+	}
+}
+@media screen and (max-width: 479px){
+.sert{
+  &-result_boxcenter{
+  	margin-left: 0;
+  	margin-right: 0;
+  }
+  &-result_box{
+  	width: 300px;
+  }
+  &-result__indicate {
+    line-height: 68px;
+}
+}
 }
