@@ -45,39 +45,290 @@ input::-ms-clear {
 .title {
 
 }
+.text__green {
+  color: #779a0b;
+}
 
-@media screen and (max-width: 1180px){
+.form {
+  width: 270px;
+  padding: 6px;
+  border-radius: 5px 5px 50px;
+  background-color: #ffffff;
+  &__wrapper {
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px 5px 50px;
+    background-color: #ffffff;
+    padding-right: 17px;
+    padding-left: 17px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  &__discont {
+    width: 83px;
+    height: 83px;
+    background-image: url('../img/discont.svg');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: -42px;
+  }
+  & .discont__text-1 {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+  }
+  & .discont__text-2 {
+    text-shadow: 0 0 2px #333;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 900;
+    margin-left: -6px;
+    margin-top: 4px;
+  }
+  &__time {
+    margin-top: -37px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  & .time__date {
+    color: #fc8a1c;
+    font-size: 19px;
+    font-weight: 500;
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    padding-bottom: 12px;
+  }
+  & .price__old {
+    text-align: left;
+  }
+  & .price__title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    &-old {
+      color: #777777;
+    }
+  }
+  & .old__num,
+  & .new__num {
+    margin-top: 10px;
+  }
+  & .old__num {
+    color: #999999;
+    font-size: 32px;
+    line-height: 43px;
+  }
+  & .new__num {
+    background-color: #fc8a1c;
+    border-radius: 36px 4px 42px;
+    font-size: 36px;
+    font-weight: 900;
+    color: #fff;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  & .x_currency {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  & .x_price_previous {
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: #fc8a1c;
+      height: 1px;
+      width: 100%;
+    }
+    &::before {
+      bottom: 19px;
+      left: 0;
+      transform: rotate(-19deg);
+
+    }
+    &::after {
+      bottom: 19px;
+      left: 0;
+      transform: rotate(19deg);
+    }
+  }
+  &__pack {
+    color: #444444;
+    line-height: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  & .lastpack {
+    font-weight: 900;
+  }
+  &__field {
+    width: 100%;
+    height: 65px;
+    box-shadow: inset 0 2px 7px rgba(0, 0, 0, 0.04);
+    border-radius: 32px;
+    background-color: #f5f5f3;
+    border: none;
+    outline: none;
+    padding-right: 10px;
+    padding-left: 60px;
+    margin-bottom: 22px;
+  }
+  &__name {
+    background-image: url('../img/name.svg');
+    background-repeat: no-repeat;
+    background-position: left 29px center;
+  }
+  &__tel {
+    background-image: url('../img/tel.svg');
+    background-repeat: no-repeat;
+    background-position: left 26px center;
+  }
+  &__btn {
+
+  }
+}
+.form__security {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+  position: relative;
+  z-index: 3;
+}
+.security__text {
+  color: #666666;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  outline: 0;
+  width: 100%;
+  height: 65px;
+  box-shadow: inset 0 0 4px rgba(134, 28, 15, 0.48),
+  0 16px 26px -12px #7f2418,
+  0 6px 0 -2px #d76622;
+  background-color: #008064;
+  background-image: linear-gradient(to right, #ff8900 0%, #f68b4a 51%, #ff8900 100%);
+  cursor: pointer;
+  border-radius: 33px;
+  border: 0 solid #f0aa9c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  &:hover {
+    box-shadow: inset 0 0 4px rgba(134, 28, 15, 0.48),
+    0 6px 0 -2px #d76622;
+  }
+  &:active {
+    border-bottom: none;
+    box-shadow: inset 0 0 4px rgba(134, 28, 15, 0.48);
+  }
+  & .btn__text-1 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+  }
+  & .btn__text-2 {
+    font-size: 17px;
+    line-height: 15px;
+  }
+}
+
+::-webkit-input-placeholder { color: #666; font-weight: 400; }
+::-moz-placeholder          { color: #666; font-weight: 400; } /* Firefox 19+ */
+:-moz-placeholder           { color: #666; font-weight: 400; } /* Firefox 18- */
+:-ms-input-placeholder      { color: #666; font-weight: 400; }
+
+.title {
+  font-size: 40px;
+  text-align: center;
+  line-height: 38px;
+  font-weight: 900;
+}
+
+
+
+@import "common/slick.scss";
+@import "common/slick-theme.scss";
+@import "common/header.scss";
+@import "common/stat.scss";
+@import "common/return.scss";
+@import "common/good.scss";
+@import "common/components.scss";
+@import "common/doctor.scss";
+@import "common/sert.scss";
+@import "common/use.scss";
+@import "common/reviews.scss";
+@import "common/order.scss";
+@import "common/footer.scss";
+@import "common/popup.scss";
+
+
+@media screen and (max-width: 1190px){
   .wrapper {
     max-width: 1024px;
     padding-right: 10px;
     padding-left: 10px;
+  }
+  .title {
+    font-size: 36px;
+    line-height: 1.2;
   }
 }
 @media screen and (max-width: 1023px){
   .wrapper {
     max-width: 768px;
   }
+  .title {
+    font-size: 32px;
+  }
 }
 @media screen and (max-width: 767px){
   .wrapper {
     max-width: 640px;
+  }
+  .title {
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 639px){
   .wrapper {
     max-width: 480px;
   }
+  .title {
+    font-size: 24px;
+  }
 }
 
-@import "common/header.scss";
-@import "common/why.scss";
-@import "common/reason.scss";
-@import "common/source.scss";
-@import "common/consist.scss";
-@import "common/doctor.scss";
-@import "common/reviews.scss";
-@import "common/way.scss";
-@import "common/use.scss";
-@import "common/order.scss";
-@import "common/footer.scss";
-@import "common/popup.scss";
+@media screen and (max-width: 1190px) {
+
+}
+@media screen and (max-width: 1023px) {
+
+}
+@media screen and (max-width: 767px) {
+
+}
+@media screen and (max-width: 639px) {
+
+}
